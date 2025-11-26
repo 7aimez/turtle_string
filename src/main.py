@@ -39,7 +39,6 @@ def c(x, y):
     t.goto(x, y+100)
     t.goto(x+40, y+100)
     
-
 def d(x, y):
     t.penup()
     t.goto(x, y)
@@ -49,7 +48,24 @@ def d(x, y):
     t.goto(x+40, y)
     t.goto(x, y)
 
-
+def e(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x+40, y)
+    t.goto(x, y)
+    t.goto(x, y+35)
+    t.goto(x+30, y+35)
+    t.goto(x, y+35)
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+    
+def f(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto
+    
 
 # Extra Shapes
 
@@ -99,6 +115,8 @@ def draw():
     b(-150, 0)
     c(-100, 0)
     d(-50, 0)
+    e(0, 0)
+    f(50, 0)
 
 
 
