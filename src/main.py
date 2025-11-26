@@ -64,7 +64,43 @@ def f(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
-    t.goto
+    t.goto(x, y+75)
+    t.goto(x+35, y+75)
+    t.goto(x, y+75)
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+    
+def g(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+    t.goto(x, y+100)
+    t.goto(x, y)
+    t.goto(x+40, y)
+    t.goto(x+40, y+35)
+    t.goto(x+20, y+35)
+    
+def h(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x, y+50)
+    t.goto(x+40, y+50)
+    t.goto(x+40, y)
+    t.goto(x+40, y+100)
+    
+def i(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x+40, y)
+    t.goto(x+20, y)
+    t.goto(x+20, y+100)
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
     
 
 # Extra Shapes
@@ -111,12 +147,16 @@ def draw():
 
     #--------------------------------------#
     
-    a(-200, 0)
-    b(-150, 0)
-    c(-100, 0)
-    d(-50, 0)
-    e(0, 0)
-    f(50, 0)
+    a(-200, 150)
+    b(-150, 150)
+    c(-100, 150)
+    d(-50, 150)
+    e(0, 150)
+    f(50, 150)
+    g(100, 150)
+    h(150, 150)
+    
+    i(-200, 0)
 
 
 
