@@ -204,12 +204,56 @@ def letter_t(x, y):
 
 def letter_u(x, y):
     t.penup()
-    t.goto(x+20, y)
+    t.goto(x, y)
     t.pendown()
     t.goto(x, y+100)
     t.goto(x, y)
     t.goto(x+40, y)
     t.goto(x+40, y+100)
+    
+def letter_v(x, y):
+    t.penup()
+    t.goto(x, y+100)
+    t.pendown()
+    t.goto(x+20, y)
+    t.goto(x+40, y+100)
+    
+def letter_w(x, y):
+    t.penup()
+    t.goto(x, y+100)
+    t.pendown()
+    t.goto(x+10, y)
+    t.goto(x+20, y+50)
+    t.goto(x+30, y)
+    t.goto(x+40, y+100)
+    
+def letter_x(x, y):
+    t.penup()
+    t.goto(x, y+100)
+    t.pendown()
+    t.goto(x+40, y)
+    t.goto(x+20, y+50)
+    t.goto(x, y)
+    t.goto(x+40, y+100)
+    
+def letter_y(x, y):
+    t.penup()
+    t.goto(x+20, y)
+    t.pendown()
+    t.goto(x+20, y+50)
+    t.goto(x, y+100)
+    t.goto(x+20, y+50)
+    t.goto(x+40, y+100)
+    
+def letter_z(x, y):
+    t.penup()
+    t.goto(x, y+100)
+    t.pendown()
+    t.goto(x+40, y+100)
+    t.goto(x, y)
+    t.goto(x+40, y)
+    
+    
 
 
 #------------------------------------------------------------#
@@ -282,6 +326,12 @@ def draw():
     letter_s(-100, -150)
     letter_t(-50, -150)
     letter_u(0, -150)
+    letter_v(50, -150)
+    letter_w(100, -150)
+    letter_x(150, -150)
+    
+    letter_y(-50, -300)
+    letter_z(0, -300)
 
 
 
