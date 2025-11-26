@@ -298,44 +298,23 @@ def line(ax, ay, bx, by, width):
 
 # Main functions
 
+
+# Main drawing logic using a string and dynamic function calls
+def draw_text(text, start_x, start_y, spacing=50):
+    letters = list(text.lower())  # Convert string to list of letters, all lowercase to match function names
+    x = start_x
+    y = start_y
+    for letter in letters:
+        func_name = f'letter_{letter}'
+        letter_func = globals().get(func_name)
+        if letter_func:
+            letter_func(x, y)
+        x += spacing  # Move x position for next letter
+
 def draw():
     print("Running...")
-
-    #--------------------------------------#
-    
-    letter_a(-200, 150)
-    letter_b(-150, 150)
-    letter_c(-100, 150)
-    letter_d(-50, 150)
-    letter_e(0, 150)
-    letter_f(50, 150)
-    letter_g(100, 150)
-    letter_h(150, 150)
-    
-    letter_i(-200, 0)
-    letter_j(-150, 0)
-    letter_k(-100, 0)
-    letter_l(-50, 0)
-    letter_m(0, 0)
-    letter_n(50, 0)
-    letter_o(100, 0)
-    letter_p(150, 0)
-
-    letter_q(-200, -150)
-    letter_r(-150, -150)
-    letter_s(-100, -150)
-    letter_t(-50, -150)
-    letter_u(0, -150)
-    letter_v(50, -150)
-    letter_w(100, -150)
-    letter_x(150, -150)
-    
-    letter_y(-50, -300)
-    letter_z(0, -300)
-
-
-
-    #--------------------------------------#
+    text = "abcdef"  # Example text; change as you like
+    draw_text(text, -200, 150, spacing=50)
 
 if __name__ == '__main__':
     draw()
