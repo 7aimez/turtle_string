@@ -1,5 +1,4 @@
 import turtle
-import time
 
 t = turtle.Turtle()
 t.speed(10)
@@ -252,68 +251,25 @@ def letter_z(x, y):
     t.goto(x+40, y+100)
     t.goto(x, y)
     t.goto(x+40, y)
-    
-    
 
 
-#------------------------------------------------------------#
-    
-
-# Extra Shapes
-
-def fill(ax, ay, bx, by, color):
-    t.setheading(90)
-    t.penup()
-    t.goto(ax, ay)
-    t.pendown()
-    t.color(color)
-    t.begin_fill()
-    t.goto(ax, by)
-    t.goto(bx, by)
-    t.goto(bx, ay)
-    t.goto(ax, ay)
-    t.end_fill()
-
-def rect(ax, ay, bx, by, color):
-    t.setheading(90)
-    t.penup()
-    t.goto(ax, ay)
-    t.pendown()
-    t.color(color)
-    t.goto(ax, by)
-    t.goto(bx, by)
-    t.goto(bx, ay)
-    t.goto(ax, ay)
-
-def line(ax, ay, bx, by, width):
-    t.width(width)
-    t.penup()
-    t.goto(ax, ay)
-    t.pendown()
-    t.goto(bx, by)
-    t.width(1)
-
-
-
-
-# Main functions
-
-
-# Main drawing logic using a string and dynamic function calls
-def draw_text(text, start_x, start_y, spacing=50):
-    letters = list(text.lower())  # Convert string to list of letters, all lowercase to match function names
+def draw_text(text, start_x, start_y, spacing=50, line_height=150):
     x = start_x
     y = start_y
-    for letter in letters:
-        func_name = f'letter_{letter}'
-        letter_func = globals().get(func_name)
-        if letter_func:
-            letter_func(x, y)
-        x += spacing  # Move x position for next letter
+    for letter in text.lower():
+        if letter == '\n':
+            y -= line_height
+            x = start_x
+        else:
+            func_name = 'letter_' + letter
+            letter_func = globals().get(func_name)
+            if letter_func:
+                letter_func(x, y)
+            x += spacing
 
 def draw():
     print("Running...")
-    text = "abcdef"  # Example text; change as you like
+    text = "get on\nwith the\nwork"
     draw_text(text, -200, 150, spacing=50)
 
 if __name__ == '__main__':
