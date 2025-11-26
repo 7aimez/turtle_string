@@ -102,6 +102,26 @@ def i(x, y):
     t.goto(x, y+100)
     t.goto(x+40, y+100)
     
+def j(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+35)
+    t.goto(x, y)
+    t.goto(x+40, y)
+    t.goto(x+40, y+100)
+    t.goto(x, y+100)
+    
+def k(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x, y+50)
+    t.goto(x+40, y+100)
+    t.goto(x, y+50)
+    t.goto(x+40, y)
+    
 
 # Extra Shapes
 
@@ -157,6 +177,8 @@ def draw():
     h(150, 150)
     
     i(-200, 0)
+    j(-150, 0)
+    k(-100, 0)
 
 
 
