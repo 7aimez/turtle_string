@@ -8,7 +8,7 @@ t.hideturtle()
 
 # Letters
 
-def a(x, y):
+def letter_a(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -19,7 +19,7 @@ def a(x, y):
     t.pendown()
     t.goto(x+30, y+50)
 
-def b(x, y):
+def letter_b(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -30,7 +30,7 @@ def b(x, y):
     t.goto(x+40, y)
     t.goto(x, y)
 
-def c(x, y):
+def letter_c(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -39,7 +39,7 @@ def c(x, y):
     t.goto(x, y+100)
     t.goto(x+40, y+100)
     
-def d(x, y):
+def letter_d(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -48,7 +48,7 @@ def d(x, y):
     t.goto(x+40, y)
     t.goto(x, y)
 
-def e(x, y):
+def letter_e(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -60,7 +60,7 @@ def e(x, y):
     t.goto(x, y+100)
     t.goto(x+40, y+100)
     
-def f(x, y):
+def letter_f(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -70,7 +70,7 @@ def f(x, y):
     t.goto(x, y+100)
     t.goto(x+40, y+100)
     
-def g(x, y):
+def letter_g(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -82,7 +82,7 @@ def g(x, y):
     t.goto(x+40, y+35)
     t.goto(x+20, y+35)
     
-def h(x, y):
+def letter_h(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -92,7 +92,7 @@ def h(x, y):
     t.goto(x+40, y)
     t.goto(x+40, y+100)
     
-def i(x, y):
+def letter_i(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -102,7 +102,7 @@ def i(x, y):
     t.goto(x, y+100)
     t.goto(x+40, y+100)
     
-def j(x, y):
+def letter_j(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -112,7 +112,7 @@ def j(x, y):
     t.goto(x+40, y+100)
     t.goto(x, y+100)
     
-def k(x, y):
+def letter_k(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -121,6 +121,98 @@ def k(x, y):
     t.goto(x+40, y+100)
     t.goto(x, y+50)
     t.goto(x+40, y)
+
+def letter_l(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x, y)
+    t.goto(x+40, y)
+
+def letter_m(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x+20, y+50)
+    t.goto(x+40, y+100)
+    t.goto(x+40, y)
+
+def letter_n(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x+40, y)
+    t.goto(x+40, y+100)
+
+def letter_o(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+    t.goto(x+40, y)
+    t.goto(x, y)
+
+def letter_p(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+    t.goto(x+40, y+60)
+    t.goto(x, y+60)
+
+def letter_q(x, y):
+    t.penup()
+    t.goto(x+40, y)
+    t.pendown()
+    t.goto(x+40, y+100)
+    t.goto(x, y+100)
+    t.goto(x, y+60)
+    t.goto(x+40, y+60)
+
+def letter_r(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+    t.goto(x+40, y+50)
+    t.goto(x, y+50)
+    t.goto(x+40, y)
+
+def letter_s(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x+40, y)
+    t.goto(x+40, y+50)
+    t.goto(x, y+50)
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+
+def letter_t(x, y):
+    t.penup()
+    t.goto(x+20, y)
+    t.pendown()
+    t.goto(x+20, y+100)
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+
+def letter_u(x, y):
+    t.penup()
+    t.goto(x+20, y)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x, y)
+    t.goto(x+40, y)
+    t.goto(x+40, y+100)
+
+
+#------------------------------------------------------------#
     
 
 # Extra Shapes
@@ -167,18 +259,29 @@ def draw():
 
     #--------------------------------------#
     
-    a(-200, 150)
-    b(-150, 150)
-    c(-100, 150)
-    d(-50, 150)
-    e(0, 150)
-    f(50, 150)
-    g(100, 150)
-    h(150, 150)
+    letter_a(-200, 150)
+    letter_b(-150, 150)
+    letter_c(-100, 150)
+    letter_d(-50, 150)
+    letter_e(0, 150)
+    letter_f(50, 150)
+    letter_g(100, 150)
+    letter_h(150, 150)
     
-    i(-200, 0)
-    j(-150, 0)
-    k(-100, 0)
+    letter_i(-200, 0)
+    letter_j(-150, 0)
+    letter_k(-100, 0)
+    letter_l(-50, 0)
+    letter_m(0, 0)
+    letter_n(50, 0)
+    letter_o(100, 0)
+    letter_p(150, 0)
+
+    letter_q(-200, -150)
+    letter_r(-150, -150)
+    letter_s(-100, -150)
+    letter_t(-50, -150)
+    letter_u(0, -150)
 
 
 
