@@ -4,6 +4,19 @@ t = turtle.Turtle()
 t.speed(10)
 t.hideturtle()
 
+# Extended Logging
+
+log = []
+
+def addToLog(text):
+    # Create public
+    if (text):
+        log.append(text)
+        # Print the last log
+        print(text)
+
+def printLog():
+    print(log)
 
 # Letters
 
@@ -254,24 +267,33 @@ def letter_z(x, y):
 
 
 def draw_text(text, start_x, start_y, spacing=50, line_height=150):
+
+    # Start x and y
     x = start_x
     y = start_y
+
+    # Run for each letter
     for letter in text.lower():
         if letter == '\n':
+            # New line
             y -= line_height
+            
+            # Return to start_x
             x = start_x
         else:
+            # Run for function name
             func_name = 'letter_' + letter
             letter_func = globals().get(func_name)
             if letter_func:
                 letter_func(x, y)
+            
+            # Add more spacing
             x += spacing
 
-def draw():
-    print("Running...")
-    text = "get on\nwith the\nwork"
-    draw_text(text, -200, 150, spacing=50)
+def main():
+    addToLog("Running")
+    draw_text("Text", -200, 150, spacing=50)
 
 if __name__ == '__main__':
-    draw()
+    main()
     turtle.done()
