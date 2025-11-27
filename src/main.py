@@ -264,6 +264,45 @@ def letter_z(x, y):
     t.goto(x+40, y+100)
     t.goto(x, y)
     t.goto(x+40, y)
+    
+# Special Characters    
+
+def letter_1(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+5)
+    t.goto(x+5, y+5)
+    t.goto(x+5, y)
+    t.goto(x, y)
+    
+def letter_2(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+5)
+    t.goto(x+5, y+5)
+    t.goto(x+5, y)
+    t.goto(x, y)
+    t.penup()
+    t.goto(x, y+10)
+    t.pendown()
+    t.goto(x, y+100)
+    t.goto(x+5, y+100)
+    t.goto(x+5, y+10)
+    t.goto(x, y+10)
+
+def letter_3(x, y):
+    t.penup()
+    t.goto(x+5, y)
+    t.pendown()
+    t.goto(x+5, y+5)
+    t.goto(x+10, y+5)
+    t.goto(x+10, y-10)
+    t.goto(x, y-10)
+    t.goto(x, y-5)
+    t.goto(x+5, y-5)
+    t.goto(x+5, y)
 
 
 def draw_text(text, start_x, start_y, spacing=50, line_height=150):
@@ -291,8 +330,11 @@ def draw_text(text, start_x, start_y, spacing=50, line_height=150):
             x += spacing
 
 def main():
-    addToLog("Running")
-    draw_text("Text", -200, 150, spacing=50)
+    addToLog("Running...")
+    
+    # KEY: Letters [a-z], Special [1="."; 2="!"; 3=","; etc...]
+    text = "a32"
+    draw_text(text, -200, 150, spacing=50)
 
 if __name__ == '__main__':
     main()
