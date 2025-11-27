@@ -304,10 +304,41 @@ def letter_3(x, y):
     t.goto(x+5, y-5)
     t.goto(x+5, y)
 
+def letter_4(x, y):
+    t.penup()
+    t.goto(x+17.5, y+100)
+    t.pendown()
+    t.goto(x+22.5, y+100)
+    t.goto(x+22.5, y+90)
+    t.goto(x+17.5, y+90)
+    t.goto(x+17.5, y+100)
+
+def letter_5(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.goto(x, y+5)
+    t.goto(x+5, y+5)
+    t.goto(x+5, y)
+    t.goto(x, y)
+    t.penup()
+    t.goto(x, y+10)
+    t.pendown()
+    t.goto(x, y+50)
+    t.goto(x+35, y+50)
+    t.goto(x+35, y+95)
+    t.goto(x, y+95)
+    t.goto(x, y+100)
+    t.goto(x+40, y+100)
+    t.goto(x+40, y+45)
+    t.goto(x+5, y+45)
+    t.goto(x+5, y+10)
+    t.goto(x, y+10)
+
 
 def draw_text(text, start_x, start_y, spacing=50, line_height=150):
     # Special Characters
-    sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3")
+    sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3").replace("'", "4").replace("?", "5")
     # Start
     x = start_x
     y = start_y
@@ -324,10 +355,11 @@ def draw_text(text, start_x, start_y, spacing=50, line_height=150):
             x += spacing
 
 def main():
-    addToLog("Running...")
-    
     # KEY: Letters [a-z], Special [1="."; 2="!"; 3=","; etc...]
-    text = "This,\nis a...\nsample!"
+    text = "?"
+
+    addToLog("\n\nRunning...")
+    
     draw_text(text, -200, 100, spacing=50)
 
 if __name__ == '__main__':
