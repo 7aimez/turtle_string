@@ -336,6 +336,7 @@ def letter_5(x, y):
     t.goto(x, y+10)
 
 
+
 def draw_text(text, start_x, start_y, spacing=50, line_height=150):
     # Special Characters
     sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3").replace("'", "4").replace("?", "5")
@@ -355,11 +356,8 @@ def draw_text(text, start_x, start_y, spacing=50, line_height=150):
             x += spacing
 
 def main():
-    # KEY: Letters [a-z], Special [1="."; 2="!"; 3=","; etc...]
-    text = "?"
-
+    text = "This is sample\ntext!\nSpecial Chars .!,?"
     addToLog("\n\nRunning...")
-    
     draw_text(text, -200, 100, spacing=50)
 
 if __name__ == '__main__':
