@@ -306,35 +306,29 @@ def letter_3(x, y):
 
 
 def draw_text(text, start_x, start_y, spacing=50, line_height=150):
-
-    # Start x and y
+    # Special Characters
+    sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3")
+    # Start
     x = start_x
     y = start_y
-
-    # Run for each letter
-    for letter in text.lower():
+    # For each letter in the text
+    for letter in sc_text.lower():
         if letter == '\n':
-            # New line
             y -= line_height
-            
-            # Return to start_x
             x = start_x
         else:
-            # Run for function name
             func_name = 'letter_' + letter
             letter_func = globals().get(func_name)
             if letter_func:
                 letter_func(x, y)
-            
-            # Add more spacing
             x += spacing
 
 def main():
     addToLog("Running...")
     
     # KEY: Letters [a-z], Special [1="."; 2="!"; 3=","; etc...]
-    text = "a32"
-    draw_text(text, -200, 150, spacing=50)
+    text = "This,\nis a...\nsample!"
+    draw_text(text, -200, 100, spacing=50)
 
 if __name__ == '__main__':
     main()
