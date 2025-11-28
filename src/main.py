@@ -96,7 +96,8 @@ special_characters = {
                         t.goto(x + 5, y + 10), t.goto(x, y + 10)),
 }
 
-def draw_text(text, start_x, start_y, spacing=50, line_height=150):
+def draw_text(text, pensize, start_x, start_y, spacing=50, line_height=150):
+    t.pensize(pensize)
     # Special Characters
     sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3").replace("'", "4").replace("?", "5")
     x = start_x # Set the first x to the start_x
@@ -119,7 +120,7 @@ def draw_text(text, start_x, start_y, spacing=50, line_height=150):
 def main():
     text = "This is\nsample\ntext!\n"
     addToLog("\n\nRunning...")
-    draw_text(text, -200, 100, spacing=50)
+    draw_text(text, 3, -200, 100, spacing=50)
     addToLog("\nCompleted Drawing Text")
 
 if __name__ == '__main__':
