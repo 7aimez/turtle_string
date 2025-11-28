@@ -48,7 +48,6 @@ letters = {
 }
 
 # Special Characters    
-
 special_characters = {
     '1': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), t.goto(x + 5, y), t.goto(x, y)),
     '2': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 30), t.pendown(), t.goto(x, y + 100), t.goto(x + 5, y + 100), t.goto(x + 5, y + 30), t.goto(x, y + 30)),
@@ -82,7 +81,6 @@ def main():
     text = "It is\nisn't it?"
     addToLog("\n\nRunning...")
     draw_text(text, 10, -200, 100, spacing=60)
-    addToLog("\nCompleted Drawing Text")
 
 if __name__ == '__main__':
     main()
