@@ -71,7 +71,7 @@ letters = {
                         t.goto(x + 20, y + 50), t.goto(x + 40, y + 100)),
     'z': lambda x, y: (t.penup(), t.goto(x, y + 100), t.pendown(), t.goto(x + 40, y + 100), t.goto(x, y), 
                         t.goto(x + 40, y)),
-    ' ': lambda x, y: (x + 50),  # Adding a space function
+    ' ': lambda x, y: (x + 50),
 }
 
 # Special Characters    
