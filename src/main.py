@@ -16,7 +16,7 @@ def addToLog(text):
 def printLog():
     print(log)
 
-# Letters and Space Dictionary
+# Letters and Space
 letters = {
     'a': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x + 20, y + 100), t.goto(x + 40, y),
                         t.penup(), t.goto(x + 10, y + 50), t.pendown(), t.goto(x + 30, y + 50)),
@@ -80,20 +80,20 @@ special_characters = {
     '1': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), 
                         t.goto(x + 5, y), t.goto(x, y)),
     '2': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), 
-                        t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 10), 
+                        t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 30), 
                         t.pendown(), t.goto(x, y + 100), t.goto(x + 5, y + 100), 
-                        t.goto(x + 5, y + 10), t.goto(x, y + 10)),
+                        t.goto(x + 5, y + 30), t.goto(x, y + 30)),
     '3': lambda x, y: (t.penup(), t.goto(x + 5, y), t.pendown(), t.goto(x + 5, y + 5), t.goto(x + 10, y + 5), 
                         t.goto(x + 10, y - 10), t.goto(x, y - 10), t.goto(x, y - 5), 
                         t.goto(x + 5, y - 5), t.goto(x + 5, y)),
     '4': lambda x, y: (t.penup(), t.goto(x + 17.5, y + 100), t.pendown(), t.goto(x + 22.5, y + 100), 
                         t.goto(x + 22.5, y + 90), t.goto(x + 17.5, y + 90), t.goto(x + 17.5, y + 100)),
     '5': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), 
-                        t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 10), 
+                        t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 30), 
                         t.pendown(), t.goto(x, y + 50), t.goto(x + 35, y + 50), 
                         t.goto(x + 35, y + 95), t.goto(x, y + 95), t.goto(x, y + 100), 
                         t.goto(x + 40, y + 100), t.goto(x + 40, y + 45), t.goto(x + 5, y + 45), 
-                        t.goto(x + 5, y + 10), t.goto(x, y + 10)),
+                        t.goto(x + 5, y + 30), t.goto(x, y + 30)),
 }
 
 def draw_text(text, pensize, start_x, start_y, spacing=50, line_height=150):
@@ -118,9 +118,9 @@ def draw_text(text, pensize, start_x, start_y, spacing=50, line_height=150):
             x += spacing # Add spacing after special character
 
 def main():
-    text = "This is\nsample\ntext!\n"
+    text = "It is\nisn't it?"
     addToLog("\n\nRunning...")
-    draw_text(text, 3, -200, 100, spacing=50)
+    draw_text(text, 10, -200, 100, spacing=60)
     addToLog("\nCompleted Drawing Text")
 
 if __name__ == '__main__':
