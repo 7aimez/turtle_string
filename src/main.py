@@ -120,6 +120,7 @@ def main():
     text = "This is\nsample\ntext!\n"
     addToLog("\n\nRunning...")
     draw_text(text, -200, 100, spacing=50)
+    addToLog("\nCompleted Drawing Text")
 
 if __name__ == '__main__':
     main()
