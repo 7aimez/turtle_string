@@ -2,7 +2,6 @@ import turtle
 
 t = turtle.Turtle()
 t.speed(10)
-t.hideturtle()
 
 # Extended Logging
 
@@ -56,7 +55,7 @@ special_characters = {
     '5': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 30), t.pendown(), t.goto(x, y + 50), t.goto(x + 35, y + 50), t.goto(x + 35, y + 95), t.goto(x, y + 95), t.goto(x, y + 100), t.goto(x + 40, y + 100), t.goto(x + 40, y + 45), t.goto(x + 5, y + 45), t.goto(x + 5, y + 30), t.goto(x, y + 30)),
 }
 
-def draw_text(text, pensize, start_x, start_y, spacing=50, line_height=150):
+def draw_text(text, pensize, start_x, start_y, spacing, line_height):
     t.pensize(pensize)
     # Special Characters
     sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3").replace("'", "4").replace("?", "5")
@@ -78,9 +77,23 @@ def draw_text(text, pensize, start_x, start_y, spacing=50, line_height=150):
             x += spacing # Add spacing after special character
 
 def main():
-    text = "It is\nisn't it?"
+    setup = {
+        "text": "This is\nsample\ntext!",
+        "pensize": 10,
+        "start_x": -200,
+        "start_y": 100,
+        "spacing": 60,
+        "line_height": 150,
+        "show_turtle": False,
+        
+    }
+    text = "This is\nsample\ntext!"
     addToLog("\n\nRunning...")
-    draw_text(text, 10, -200, 100, spacing=60)
+    if setup["show_turtle"]:
+        t.showturtle()
+    else:
+        t.hideturtle()
+    draw_text(setup["text"], setup["pensize"], setup["start_x"], setup["start_y"], setup["spacing"], setup["line_height"])
 
 if __name__ == '__main__':
     main()
