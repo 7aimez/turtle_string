@@ -84,10 +84,10 @@ def main():
         "start_y": 100,
         "spacing": 60,
         "line_height": 150,
-        "show_turtle": False,
-        
+        "show_turtle": True,
+        "turtle_shape": "circle",
     }
-    text = "This is\nsample\ntext!"
+    t.shape(setup["turtle_shape"])
     addToLog("\n\nRunning...")
     if setup["show_turtle"]:
         t.showturtle()
@@ -97,4 +97,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    t.hideturtle()
     turtle.done()
