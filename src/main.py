@@ -1,7 +1,7 @@
 import turtle
 
 t = turtle.Turtle()
-t.speed(10)
+
 
 # Extended Logging
 
@@ -55,12 +55,17 @@ special_characters = {
     '5': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 30), t.pendown(), t.goto(x, y + 50), t.goto(x + 35, y + 50), t.goto(x + 35, y + 95), t.goto(x, y + 95), t.goto(x, y + 100), t.goto(x + 40, y + 100), t.goto(x + 40, y + 45), t.goto(x + 5, y + 45), t.goto(x + 5, y + 30), t.goto(x, y + 30)),
 }
 
-def draw_text(text, pensize, start_x, start_y, spacing, line_height):
+def draw_text(text, pensize, start_x, start_y, spacing, line_height, speed):
+    t.speed(0)
     t.pensize(pensize)
     # Special Characters
     sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3").replace("'", "4").replace("?", "5")
     x = start_x # Set the first x to the start_x
     y = start_y # Set the first y to the start_y
+    t.penup()
+    t.goto(start_x, start_y)
+    t.pendown()
+    t.speed(speed)
     for letter in sc_text.lower():
         if letter == '\n':
             y -= line_height
@@ -76,9 +81,21 @@ def draw_text(text, pensize, start_x, start_y, spacing, line_height):
             special_characters[letter](x, y)
             x += spacing # Add spacing after special character
 
+def draw_bg():
+    t.penup()
+    t.goto(-1000, 1000)
+    t.pendown()
+    t.begin_fill()
+    t.goto(1000, 1000)
+    t.goto(1000, -1000)
+    t.goto(-1000, -1000)
+    t.goto(-1000, 1000)
+    t.end_fill()
+
 def main():
     setup = {
         "text": "This is\nsample\ntext!",
+        "speed": 10,
         "pensize": 10,
         "start_x": -200,
         "start_y": 100,
@@ -86,14 +103,21 @@ def main():
         "line_height": 150,
         "show_turtle": True,
         "turtle_shape": "circle",
+        "color": "orange",
+        "bg": "blue",
     }
-    t.shape(setup["turtle_shape"])
     addToLog("\n\nRunning...")
+    t.shape(setup["turtle_shape"])
     if setup["show_turtle"]:
         t.showturtle()
     else:
         t.hideturtle()
-    draw_text(setup["text"], setup["pensize"], setup["start_x"], setup["start_y"], setup["spacing"], setup["line_height"])
+    t.speed(0)
+    t.color(setup["bg"])
+    draw_bg()
+    t.speed(setup["speed"])
+    t.color(setup["color"])
+    draw_text(setup["text"], setup["pensize"], setup["start_x"], setup["start_y"], setup["spacing"], setup["line_height"], setup["speed"])
 
 if __name__ == '__main__':
     main()
