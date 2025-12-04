@@ -1,13 +1,17 @@
-# Import turtle as 't'
 import turtle
+
 t = turtle.Turtle()
 
+
 # Extended Logging
+
 log = []
+
 def addToLog(text):
     if text:
         log.append(text)
         print(text)
+
 def printLog():
     print(log)
 
@@ -51,7 +55,6 @@ special_characters = {
     '5': lambda x, y: (t.penup(), t.goto(x, y), t.pendown(), t.goto(x, y + 5), t.goto(x + 5, y + 5), t.goto(x + 5, y), t.goto(x, y), t.penup(), t.goto(x, y + 30), t.pendown(), t.goto(x, y + 50), t.goto(x + 35, y + 50), t.goto(x + 35, y + 95), t.goto(x, y + 95), t.goto(x, y + 100), t.goto(x + 40, y + 100), t.goto(x + 40, y + 45), t.goto(x + 5, y + 45), t.goto(x + 5, y + 30), t.goto(x, y + 30)),
 }
 
-# Draw Text
 def draw_text(text, pensize, start_x, start_y, spacing, line_height, speed):
     t.speed(0)
     t.pensize(pensize)
@@ -78,7 +81,6 @@ def draw_text(text, pensize, start_x, start_y, spacing, line_height, speed):
             special_characters[letter](x, y)
             x += spacing # Add spacing after special character
 
-# Draw Background
 def draw_bg():
     t.penup()
     t.goto(-1000, 1000)
@@ -90,7 +92,6 @@ def draw_bg():
     t.goto(-1000, 1000)
     t.end_fill()
 
-# Main
 def main():
     setup = {
         "text": "This is\nsample\ntext!",
@@ -102,8 +103,8 @@ def main():
         "line_height": 150,
         "show_turtle": True,
         "turtle_shape": "circle",
-        "color": "orange",
-        "bg": "blue",
+        "color": "darkblue",
+        "bg": "#ebebeb",
     }
     addToLog("\n\nRunning...")
     t.shape(setup["turtle_shape"])
@@ -118,7 +119,6 @@ def main():
     t.color(setup["color"])
     draw_text(setup["text"], setup["pensize"], setup["start_x"], setup["start_y"], setup["spacing"], setup["line_height"], setup["speed"])
 
-# Run Program
 if __name__ == '__main__':
     main()
     t.hideturtle()
