@@ -59,7 +59,7 @@ def draw_text(text, pensize, start_x, start_y, spacing, line_height, speed):
     t.speed(0)
     t.pensize(pensize)
     # Special Characters
-    sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3").replace("'", "4").replace("?", "5")
+    sc_text = text.replace(".", "1").replace("!", "2").replace(",", "3").replace("'", "4").replace("?", "5").replace("/", "\n")
     x = start_x # Set the first x to the start_x
     y = start_y # Set the first y to the start_y
     t.penup()
@@ -94,8 +94,8 @@ def draw_bg():
 
 def main():
     setup = {
-        "text": "This is\nsample\ntext!",
-        "speed": 10,
+        "text": "This is/sample/text!",
+        "speed": 5,
         "pensize": 10,
         "start_x": -200,
         "start_y": 100,
