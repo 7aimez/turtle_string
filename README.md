@@ -4,16 +4,41 @@
 
 ---
 
-# About
+## About
 
 This python script splits up the text, uses the letter functions to draw the letter using `t.goto(x, y)`, reletive to the bottom left corner of the letter, e.g. `t.goto(x+10, y+20)`.
 
-Here is an example of **Turtle String** in action:
+## Features
 
-|<img width="440" height="501" alt="image" src="https://github.com/user-attachments/assets/96b590b1-3e24-415e-a443-957bbb69091a" />|
-|-|
+- All letters (a-z)
+- Special characters (`.`, `,`, `!`, `?`, `'`)
+- Background colour
+- Letter spacing
+- Line spacing
+- Text line width ('boldness')
 
----
+## Requirements
+
+- Python 2.5 or later
+- Turtle libs
+
+
+## Get Started
+
+**Follow these steps to use _Turtle String_:**
+
+### Manually
+
+1. Clone the repo
+   
+   ```sh
+   git clone 
+   ```
+3. Move into the source folder
+   
+   ```sh
+   
+   ```
 
 ## Contents
 
