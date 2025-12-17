@@ -59,7 +59,7 @@ This python script splits up the text, uses the letter functions to draw the let
 
 ### Automatically
 
-Run [auto.sh](install/auto.sh) to automatically install Turtle String. Then, edit the setup dictionary just inside the `main()` function to your preferences. Finally, run the program in _python_:
+Run [auto.sh](install/auto.sh) (for raw, use https://github.com/7aimez/turtle_string/raw/refs/heads/main/install/auto.sh), to automatically install Turtle String. Then, edit the setup dictionary just inside the `main()` function to your preferences. Finally, run the program in _python_:
 
 ```sh
 python main.py
