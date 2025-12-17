@@ -1,6 +1,14 @@
-# Turtle String
+<div align="center">
+   <h1>Turtle String</h1>
+   <b>Converts a string into a turtle drawing</b>
+   
+   <br /><br />
 
-**Converts a string into a turtle drawing**
+   <img src="https://img.shields.io/github/languages/count/7aimez/turtle_string" />
+   <img src="https://img.shields.io/github/languages/top/7aimez/turtle_string?logo=python" />
+   <img src="https://img.shields.io/github/stars/7aimez/turtle_string" />
+   <img src="https://img.shields.io/github/forks/7aimez/turtle_string" />
+</div>
 
 ---
 
@@ -60,5 +68,10 @@ python main.py
 ## Contents
 
 - [`src`](src/) - Contains source files and python code
+- [`install`](install/) - Install _Turtle String_
 - [`key`](key/) - Contains the key for lettering and the text arguments
 - [`src/examples`](src/examples/) - Contains example of the code being used
+
+## License
+
+_Turtle String_ is under the MIT Licesnse. Read [LICENSE](LICENSE) to find out more.
