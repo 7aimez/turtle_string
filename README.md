@@ -65,6 +65,12 @@ Run [auto.sh](install/auto.sh) (for raw, use github.com/7aimez/turtle_string/raw
 python main.py
 ```
 
+## Demo
+
+**Demo of Turtle String in action**
+
+<img alt="Demo of Turtle String in action" src="media/sample.gif" width="400" height="400" />
+
 ## Contents
 
 - [`src`](src/) - Contains source files and python code
